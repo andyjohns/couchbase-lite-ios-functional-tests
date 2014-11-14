@@ -16,22 +16,41 @@
 
 @end
 
-@implementation couchbase_lite_ios_functional_testsTests
+@implementation couchbase_lite_ios_functional_testsTests {
+    CBLManager *manager;
+    CBLDatabase *database;
+}
 
 - (void)setUp {
+
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    NSError *error;
+    
+    manager = [[CBLManager alloc] init];
+    XCTAssert(manager, @"Could not create manager");
+    
+    database = [manager databaseNamed: @"cbl-test-db" error: &error];
+    XCTAssert(database, @"Cannot create database: %@",error);
+
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+
+    NSError *error;
+    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
+    database = nil;
+    
+    [manager close];
+    manager = nil;
+    
     [super tearDown];
+    
 }
 
 - (void)testCreateManager {
     
-    CBLManager *manager = [CBLManager sharedInstance];
-    XCTAssert(manager, @"Could not create manager");
+    CBLManager *shared_manager = [CBLManager sharedInstance];
+    XCTAssert(shared_manager, @"Could not create manager");
     
 }
 
@@ -39,11 +58,13 @@
     
     NSString* dir = NSTemporaryDirectory();
     NSError* error;
-    CBLManager *manager = [[CBLManager alloc] initWithDirectory: dir
+    CBLManager *custom_manager = [[CBLManager alloc] initWithDirectory: dir
                                                         options: NULL
                                                           error: &error];
     
-    XCTAssert(manager, @"Cannot create Manager instance: %@", error);
+    XCTAssert(custom_manager, @"Cannot create Manager instance: %@", error);
+    [custom_manager close];
+    custom_manager = nil;
     
 }
 
@@ -52,48 +73,37 @@
     NSError* error;
     CBLManagerOptions options;
     options.readOnly = YES;
-    CBLManager *manager = [[CBLManager alloc] initWithDirectory: CBLManager.defaultDirectory options: &options error: &error ];
+    CBLManager *options_manager = [[CBLManager alloc] initWithDirectory: CBLManager.defaultDirectory options: &options error: &error ];
     
-    XCTAssert(manager, @"Cannot create Manager instance with custom options, %@",error);
+    XCTAssert(options_manager, @"Cannot create Manager instance with custom options, %@",error);
+    
+    [options_manager close];
+    options_manager = nil;
     
     
 }
 
 - (void) testCreateDatabase {
+
     NSError *error;
-    CBLManager *manager = [CBLManager sharedInstance];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
-    
     XCTAssert(database, @"Cannot create database: %@",error);
-    
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    database = nil;
+
 }
 
 - (void) testCreateDocument {
-    CBLManager *manager = [CBLManager sharedInstance];
-    NSError *error;
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
-    NSString* dateStr = [CBLJSON JSONObjectWithDate: [NSDate date]];
     
+    NSString* dateStr = [CBLJSON JSONObjectWithDate: [NSDate date]];
     NSDictionary* props = @{@"sequence": @("1"),
                             @"date": dateStr};
     
     CBLDocument* doc = [database createDocument];
     
     NSError* doc_error;
-    
     XCTAssert([doc putProperties: props error: &doc_error], @"Cannot create document with prop: %@ , error: %@",props, doc_error);
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    
-    database = nil;
     
 }
 
 - (void) testCreateDocWithCustomeID {
-    NSError *error;
-    CBLManager *manager = [CBLManager sharedInstance];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
     
     NSDictionary* properties = @{@"title":      @"Little, Big",
                                  @"author":     @"John Crowley",
@@ -104,20 +114,10 @@
     XCTAssert([document putProperties: properties error: &doc_error],
               @"Cannot create document with prop: %@ , error: %@",
               properties, doc_error);
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
     
-    database = nil;
 }
 
 - (void) testReadDocument {
-    NSError *error;
-    CBLManager *manager = [[CBLManager alloc]  init];
-    CBLDatabase *database = [manager databaseNamed: @"testreaddocument" error: &error];
-    
-    if (!database) {
-        NSLog(@"Cannot create database: %@",error);
-        XCTAssert(NO, @"Failed");
-    }
     
     NSDictionary* properties = @{@"title":      @"Little, Big",
                                  @"author":     @"John Crowley",
@@ -133,21 +133,11 @@
     
     NSString* title = new_doc[@"title"];
     XCTAssert([title isEqualToString: @"Little, Big"], @"Title Matched");
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    
-    database = nil;
     
 }
 
 - (void) testUpdateDocumentWithPutProp {
-    NSError *error;
-    CBLManager *manager = [[CBLManager alloc]  init];
-    CBLDatabase *database = [manager databaseNamed: @"testupdatedocument" error: &error];
-    if (!database) {
-        NSLog(@"Cannot create database: %@",error);
-        XCTAssert(NO, @"Failed");
-    }
-    
+
     NSDictionary* properties = @{@"title":      @"Little, Big",
                                  @"author":     @"John Crowley",
                                  @"published":  @1982};
@@ -163,18 +153,12 @@
     
     p[@"title"] = @"New Title";
     p[@"notes"] = @"New Notes";
-    
+    NSError *error;
     XCTAssert([doc putProperties: p error: &error], @"Unable to update values: %@",error);
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    
-    database = nil;
     
 }
 
 - (void) testDeleteDocument {
-    NSError *error;
-    CBLManager *manager = [CBLManager sharedInstance];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
     
     NSDictionary* properties = @{@"title":      @"Little, Big",
                                  @"author":     @"John Crowley",
@@ -185,31 +169,25 @@
     XCTAssert([document putProperties: properties error: &doc_error],
               @"Cannot create document with prop: %@ , error: %@",
               properties, doc_error);
+    NSError *error;
     XCTAssert([document deleteDocument: &error], @"Cannot delete document error: %@",doc_error);
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
     
-    database = nil;
     
 }
 
 - (void) testDeleteDatabase {
     NSError* error;
-    CBLManager *manager = [CBLManager sharedInstance];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
     
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
+    CBLDatabase *db = [manager databaseNamed: @"test-db" error: &error];
     
-    database = nil;
+    XCTAssert([db deleteDatabase: &error], @"Cannot delete database: %@",error);
+    db = nil;
     
 }
 
 - (void) testUpdateDocumentWithUpdateMethod {
+    
     NSError *error;
-    CBLManager *manager = [CBLManager sharedInstance];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
-    
-    
-    
     NSDictionary* properties = @{@"title":      @"Little, Big",
                                  @"author":     @"John Crowley",
                                  @"published":  @1982};
@@ -230,15 +208,10 @@
         XCTAssert(NO,@"Unable to update document %@",error);
     }
     
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    database = nil;
 }
 
 - (void) testAllDocumentQuery {
     NSError *error;
-    CBLManager *manager = [[CBLManager alloc]  init];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
-    
     for (int i = 0; i < 10; i++) {
         @autoreleasepool {
             NSString* testString = [NSString stringWithFormat:@"teststring-%@", @(i)];
@@ -258,16 +231,10 @@
         NSLog(@"documentID: %@ docKey: %@ docValue: %@", row.documentID,row.key,row.value);
     }
     
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    database = nil;
-    [manager close];
-    manager = nil;
 }
 
 - (void) testReduceQuery {
     NSError *error;
-    CBLManager *manager = [[CBLManager alloc]  init];
-    CBLDatabase *database = [manager databaseNamed: @"cbl-test-db" error: &error];
     
     for (int i = 0; i < 10; i++) {
         @autoreleasepool {
@@ -298,10 +265,7 @@
     XCTAssert([row.value isEqualToNumber: @10]);
     
     [view deleteView];
-    XCTAssert([database deleteDatabase: &error], @"Cannot delete database: %@",error);
-    database = nil;
-    [manager close];
-    manager = nil;
+    
 }
 
 @end
