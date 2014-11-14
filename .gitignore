@@ -24,6 +24,10 @@ CouchbaseLiteListener.framework
 0.0.*
 couchbase-lite-ios.zip
 couchbase-lite-ios/
+README.md
+Extras/
+LICENSE.txt
+LiteServ.app
 
 # CocoaPods
 #

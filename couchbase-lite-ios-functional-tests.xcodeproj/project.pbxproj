@@ -20,10 +20,10 @@
 		BF8893481A156A2D000E8873 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893471A156A2D000E8873 /* SystemConfiguration.framework */; };
 		BF88934A1A156A43000E8873 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893491A156A43000E8873 /* libsqlite3.dylib */; };
 		BF88934C1A156A56000E8873 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF88934B1A156A56000E8873 /* libz.dylib */; };
-		BF8893511A156B99000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF88934F1A156B99000E8873 /* CouchbaseLite.framework */; };
-		BF8893521A156B99000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF88934F1A156B99000E8873 /* CouchbaseLite.framework */; };
-		BF8893531A156B99000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893501A156B99000E8873 /* CouchbaseLiteListener.framework */; };
-		BF8893541A156B99000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893501A156B99000E8873 /* CouchbaseLiteListener.framework */; };
+		BF8893581A159447000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893561A159447000E8873 /* CouchbaseLite.framework */; };
+		BF8893591A159447000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893561A159447000E8873 /* CouchbaseLite.framework */; };
+		BF88935A1A159447000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893571A159447000E8873 /* CouchbaseLiteListener.framework */; };
+		BF88935B1A159447000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893571A159447000E8873 /* CouchbaseLiteListener.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		BF8893471A156A2D000E8873 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BF8893491A156A43000E8873 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		BF88934B1A156A56000E8873 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		BF88934F1A156B99000E8873 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLite.framework; path = "../../../Downloads/couchbase-lite-ios-enterprise_1.0.2 4/CouchbaseLite.framework"; sourceTree = "<group>"; };
-		BF8893501A156B99000E8873 /* CouchbaseLiteListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLiteListener.framework; path = "../../../Downloads/couchbase-lite-ios-enterprise_1.0.2 4/CouchbaseLiteListener.framework"; sourceTree = "<group>"; };
+		BF8893561A159447000E8873 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLite.framework; path = "../../../Downloads/couchbase-lite-ios-enterprise_1.0.2 4/CouchbaseLite.framework"; sourceTree = "<group>"; };
+		BF8893571A159447000E8873 /* CouchbaseLiteListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CouchbaseLiteListener.framework; path = "../../../Downloads/couchbase-lite-ios-enterprise_1.0.2 4/CouchbaseLiteListener.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +66,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8893531A156B99000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
 				BF88934C1A156A56000E8873 /* libz.dylib in Frameworks */,
 				BF88934A1A156A43000E8873 /* libsqlite3.dylib in Frameworks */,
 				BF8893481A156A2D000E8873 /* SystemConfiguration.framework in Frameworks */,
 				BF8893461A156A1A000E8873 /* Security.framework in Frameworks */,
-				BF8893511A156B99000E8873 /* CouchbaseLite.framework in Frameworks */,
+				BF8893581A159447000E8873 /* CouchbaseLite.framework in Frameworks */,
 				BF8893441A156A0F000E8873 /* CFNetwork.framework in Frameworks */,
+				BF88935A1A159447000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF8893521A156B99000E8873 /* CouchbaseLite.framework in Frameworks */,
-				BF8893541A156B99000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
+				BF88935B1A159447000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
+				BF8893591A159447000E8873 /* CouchbaseLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,13 +153,13 @@
 		BF88934E1A156B15000E8873 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8893561A159447000E8873 /* CouchbaseLite.framework */,
+				BF8893571A159447000E8873 /* CouchbaseLiteListener.framework */,
 				BF88934B1A156A56000E8873 /* libz.dylib */,
 				BF8893491A156A43000E8873 /* libsqlite3.dylib */,
 				BF8893471A156A2D000E8873 /* SystemConfiguration.framework */,
 				BF8893451A156A1A000E8873 /* Security.framework */,
 				BF8893431A156A0F000E8873 /* CFNetwork.framework */,
-				BF88934F1A156B99000E8873 /* CouchbaseLite.framework */,
-				BF8893501A156B99000E8873 /* CouchbaseLiteListener.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -410,8 +410,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
 				);
 				INFOPLIST_FILE = "couchbase-lite-ios-functional-tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -427,8 +425,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
@@ -450,6 +446,8 @@
 					"$(inherited)",
 					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
 					4,
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -469,6 +467,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
 					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
 					4,
 				);
