@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF88931D1A15653A000E8873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88931C1A15653A000E8873 /* main.m */; };
+		BF8893201A15653A000E8873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88931F1A15653A000E8873 /* AppDelegate.m */; };
+		BF8893231A15653A000E8873 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8893221A15653A000E8873 /* MasterViewController.m */; };
+		BF8893261A15653A000E8873 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8893251A15653A000E8873 /* DetailViewController.m */; };
+		BF8893291A15653A000E8873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF8893271A15653A000E8873 /* Main.storyboard */; };
+		BF88932B1A15653A000E8873 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF88932A1A15653A000E8873 /* Images.xcassets */; };
+		BF88932E1A15653A000E8873 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF88932C1A15653A000E8873 /* LaunchScreen.xib */; };
+		BF88933A1A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8893391A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m */; };
+		BF8893441A156A0F000E8873 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893431A156A0F000E8873 /* CFNetwork.framework */; };
+		BF8893461A156A1A000E8873 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893451A156A1A000E8873 /* Security.framework */; };
+		BF8893481A156A2D000E8873 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893471A156A2D000E8873 /* SystemConfiguration.framework */; };
+		BF88934A1A156A43000E8873 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893491A156A43000E8873 /* libsqlite3.dylib */; };
+		BF88934C1A156A56000E8873 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF88934B1A156A56000E8873 /* libz.dylib */; };
+		BF8893641A159CDC000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893621A159CDC000E8873 /* CouchbaseLite.framework */; };
+		BF8893651A159CDC000E8873 /* CouchbaseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893621A159CDC000E8873 /* CouchbaseLite.framework */; };
+		BF8893661A159CDC000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */; };
+		BF8893671A159CDC000E8873 /* CouchbaseLiteListener.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF8893341A15653A000E8873 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF88930F1A15653A000E8873 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF8893161A15653A000E8873;
+			remoteInfo = "couchbase-lite-ios-functional-tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF8893171A15653A000E8873 /* couchbase-lite-ios-functional-tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "couchbase-lite-ios-functional-tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF88931B1A15653A000E8873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF88931C1A15653A000E8873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF88931E1A15653A000E8873 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF88931F1A15653A000E8873 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF8893211A15653A000E8873 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		BF8893221A15653A000E8873 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		BF8893241A15653A000E8873 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BF8893251A15653A000E8873 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BF8893281A15653A000E8873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF88932A1A15653A000E8873 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF88932D1A15653A000E8873 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BF8893331A15653A000E8873 /* couchbase-lite-ios-functional-testsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "couchbase-lite-ios-functional-testsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8893381A15653A000E8873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF8893391A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = couchbase_lite_ios_functional_testsTests.m; sourceTree = "<group>"; };
+		BF8893431A156A0F000E8873 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BF8893451A156A1A000E8873 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BF8893471A156A2D000E8873 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BF8893491A156A43000E8873 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BF88934B1A156A56000E8873 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BF8893621A159CDC000E8873 /* CouchbaseLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLite.framework; sourceTree = "<group>"; };
+		BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CouchbaseLiteListener.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF8893141A15653A000E8873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF88934C1A156A56000E8873 /* libz.dylib in Frameworks */,
+				BF88934A1A156A43000E8873 /* libsqlite3.dylib in Frameworks */,
+				BF8893481A156A2D000E8873 /* SystemConfiguration.framework in Frameworks */,
+				BF8893461A156A1A000E8873 /* Security.framework in Frameworks */,
+				BF8893641A159CDC000E8873 /* CouchbaseLite.framework in Frameworks */,
+				BF8893441A156A0F000E8873 /* CFNetwork.framework in Frameworks */,
+				BF8893661A159CDC000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8893301A15653A000E8873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8893671A159CDC000E8873 /* CouchbaseLiteListener.framework in Frameworks */,
+				BF8893651A159CDC000E8873 /* CouchbaseLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF88930E1A15653A000E8873 = {
+			isa = PBXGroup;
+			children = (
+				BF88934E1A156B15000E8873 /* Frameworks */,
+				BF8893191A15653A000E8873 /* couchbase-lite-ios-functional-tests */,
+				BF8893361A15653A000E8873 /* couchbase-lite-ios-functional-testsTests */,
+				BF8893181A15653A000E8873 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF8893181A15653A000E8873 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF8893171A15653A000E8873 /* couchbase-lite-ios-functional-tests.app */,
+				BF8893331A15653A000E8873 /* couchbase-lite-ios-functional-testsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF8893191A15653A000E8873 /* couchbase-lite-ios-functional-tests */ = {
+			isa = PBXGroup;
+			children = (
+				BF88931E1A15653A000E8873 /* AppDelegate.h */,
+				BF88931F1A15653A000E8873 /* AppDelegate.m */,
+				BF8893211A15653A000E8873 /* MasterViewController.h */,
+				BF8893221A15653A000E8873 /* MasterViewController.m */,
+				BF8893241A15653A000E8873 /* DetailViewController.h */,
+				BF8893251A15653A000E8873 /* DetailViewController.m */,
+				BF8893271A15653A000E8873 /* Main.storyboard */,
+				BF88932A1A15653A000E8873 /* Images.xcassets */,
+				BF88932C1A15653A000E8873 /* LaunchScreen.xib */,
+				BF88931A1A15653A000E8873 /* Supporting Files */,
+			);
+			path = "couchbase-lite-ios-functional-tests";
+			sourceTree = "<group>";
+		};
+		BF88931A1A15653A000E8873 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF88931B1A15653A000E8873 /* Info.plist */,
+				BF88931C1A15653A000E8873 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF8893361A15653A000E8873 /* couchbase-lite-ios-functional-testsTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF8893391A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m */,
+				BF8893371A15653A000E8873 /* Supporting Files */,
+			);
+			path = "couchbase-lite-ios-functional-testsTests";
+			sourceTree = "<group>";
+		};
+		BF8893371A15653A000E8873 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF8893381A15653A000E8873 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF88934E1A156B15000E8873 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF8893621A159CDC000E8873 /* CouchbaseLite.framework */,
+				BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */,
+				BF88934B1A156A56000E8873 /* libz.dylib */,
+				BF8893491A156A43000E8873 /* libsqlite3.dylib */,
+				BF8893471A156A2D000E8873 /* SystemConfiguration.framework */,
+				BF8893451A156A1A000E8873 /* Security.framework */,
+				BF8893431A156A0F000E8873 /* CFNetwork.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF8893161A15653A000E8873 /* couchbase-lite-ios-functional-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF88933D1A15653A000E8873 /* Build configuration list for PBXNativeTarget "couchbase-lite-ios-functional-tests" */;
+			buildPhases = (
+				BF8893551A157465000E8873 /* Run Script */,
+				BF8893131A15653A000E8873 /* Sources */,
+				BF8893141A15653A000E8873 /* Frameworks */,
+				BF8893151A15653A000E8873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "couchbase-lite-ios-functional-tests";
+			productName = "couchbase-lite-ios-functional-tests";
+			productReference = BF8893171A15653A000E8873 /* couchbase-lite-ios-functional-tests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF8893321A15653A000E8873 /* couchbase-lite-ios-functional-testsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF8893401A15653A000E8873 /* Build configuration list for PBXNativeTarget "couchbase-lite-ios-functional-testsTests" */;
+			buildPhases = (
+				BF88932F1A15653A000E8873 /* Sources */,
+				BF8893301A15653A000E8873 /* Frameworks */,
+				BF8893311A15653A000E8873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF8893351A15653A000E8873 /* PBXTargetDependency */,
+			);
+			name = "couchbase-lite-ios-functional-testsTests";
+			productName = "couchbase-lite-ios-functional-testsTests";
+			productReference = BF8893331A15653A000E8873 /* couchbase-lite-ios-functional-testsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF88930F1A15653A000E8873 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = couchbase;
+				TargetAttributes = {
+					BF8893161A15653A000E8873 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					BF8893321A15653A000E8873 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = BF8893161A15653A000E8873;
+					};
+				};
+			};
+			buildConfigurationList = BF8893121A15653A000E8873 /* Build configuration list for PBXProject "couchbase-lite-ios-functional-tests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF88930E1A15653A000E8873;
+			productRefGroup = BF8893181A15653A000E8873 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF8893161A15653A000E8873 /* couchbase-lite-ios-functional-tests */,
+				BF8893321A15653A000E8873 /* couchbase-lite-ios-functional-testsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF8893151A15653A000E8873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8893291A15653A000E8873 /* Main.storyboard in Resources */,
+				BF88932E1A15653A000E8873 /* LaunchScreen.xib in Resources */,
+				BF88932B1A15653A000E8873 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF8893311A15653A000E8873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF8893551A157465000E8873 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e ";
+			shellScript = "/bin/rm -rf ./Frameworks/CouchbaseListener.framework\n/bin/rm -rf ./Frameworks/CouchbaseLiteListener.framework\n/bin/rm -rf ./couchbase-lite-ios.zip\n/bin/ls -l\n/usr/local/bin/wget http://factory.hq.couchbase.com:8080/job/build_cblite_ios_master-enterprise/lastStableBuild/artifact/couchbase-lite-ios/*zip*/couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios/couchbase-lite-ios-enterprise_\\*.zip\n/bin/ls -l\n/bin/pwd\n/bin/cp -Rf ./CouchbaseLite.framework ./Frameworks/\n/bin/cp -Rf ./CouchbaseLiteListener.framework ./Frameworks/\n/bin/echo \"Got Frameworks! success!\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF8893131A15653A000E8873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8893201A15653A000E8873 /* AppDelegate.m in Sources */,
+				BF8893231A15653A000E8873 /* MasterViewController.m in Sources */,
+				BF88931D1A15653A000E8873 /* main.m in Sources */,
+				BF8893261A15653A000E8873 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF88932F1A15653A000E8873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF88933A1A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF8893351A15653A000E8873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF8893161A15653A000E8873 /* couchbase-lite-ios-functional-tests */;
+			targetProxy = BF8893341A15653A000E8873 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF8893271A15653A000E8873 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF8893281A15653A000E8873 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF88932C1A15653A000E8873 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF88932D1A15653A000E8873 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF88933B1A15653A000E8873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF88933C1A15653A000E8873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF88933E1A15653A000E8873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "couchbase-lite-ios-functional-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF88933F1A15653A000E8873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "couchbase-lite-ios-functional-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF8893411A15653A000E8873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "couchbase-lite-ios-functional-testsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/couchbase-lite-ios-functional-tests.app/couchbase-lite-ios-functional-tests";
+			};
+			name = Debug;
+		};
+		BF8893421A15653A000E8873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
+					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
+					4,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "couchbase-lite-ios-functional-testsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/couchbase-lite-ios-functional-tests.app/couchbase-lite-ios-functional-tests";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF8893121A15653A000E8873 /* Build configuration list for PBXProject "couchbase-lite-ios-functional-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF88933B1A15653A000E8873 /* Debug */,
+				BF88933C1A15653A000E8873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF88933D1A15653A000E8873 /* Build configuration list for PBXNativeTarget "couchbase-lite-ios-functional-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF88933E1A15653A000E8873 /* Debug */,
+				BF88933F1A15653A000E8873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF8893401A15653A000E8873 /* Build configuration list for PBXNativeTarget "couchbase-lite-ios-functional-testsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF8893411A15653A000E8873 /* Debug */,
+				BF8893421A15653A000E8873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF88930F1A15653A000E8873 /* Project object */;
+}
