@@ -273,7 +273,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh -e ";
-			shellScript = "/bin/rm -rf ./Frameworks/CouchbaseListener.framework\n/bin/rm -rf ./Frameworks/CouchbaseLiteListener.framework\n/bin/rm -rf ./couchbase-lite-ios.zip\n/bin/ls -l\n/usr/local/bin/wget http://factory.hq.couchbase.com:8080/job/build_cblite_ios_master-enterprise/lastStableBuild/artifact/couchbase-lite-ios/*zip*/couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios/couchbase-lite-ios-enterprise_\\*.zip\n/bin/ls -l\n/bin/pwd\n/bin/cp -Rf ./CouchbaseLite.framework ./Frameworks/\n/bin/cp -Rf ./CouchbaseLiteListener.framework ./Frameworks/\n/bin/echo \"Got Frameworks! success!\"";
+			shellScript = "/bin/rm -rf ./Frameworks/CouchbaseListener.framework\n/bin/rm -rf ./Frameworks/CouchbaseLiteListener.framework\n/bin/rm -rf ./couchbase-lite-ios.zip\n/bin/ls -l\n/usr/local/bin/wget http://factory.couchbase.com/job/build_cblite_ios_master-enterprise/lastStableBuild/artifact/couchbase-lite-ios/*zip*/couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios.zip\n/usr/bin/unzip -o ./couchbase-lite-ios/couchbase-lite-ios-enterprise_\\*.zip\n/bin/ls -l\n/bin/pwd\n/bin/cp -Rf ./CouchbaseLite.framework ./Frameworks/\n/bin/cp -Rf ./CouchbaseLiteListener.framework ./Frameworks/\n/bin/echo \"Got Frameworks! success!\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
