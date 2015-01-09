@@ -446,10 +446,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
@@ -471,10 +467,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
-					"/Users/ashvinder/Downloads/couchbase-lite-ios-enterprise_1.0.2",
-					4,
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
