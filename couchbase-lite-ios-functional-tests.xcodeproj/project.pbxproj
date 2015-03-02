@@ -16,6 +16,7 @@
 		BF460DEF1A7096D600B8D143 /* CouchbaseLite.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF8893621A159CDC000E8873 /* CouchbaseLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF460DF11A709C0900B8D143 /* CouchbaseLiteListener.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF460DF21A709C1200B8D143 /* CouchbaseLiteListener.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BF8893631A159CDC000E8873 /* CouchbaseLiteListener.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF862B1A1A9B8A5E00B5712F /* QueryBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF862B181A9B8A5E00B5712F /* QueryBuilderTests.m */; };
 		BF88931D1A15653A000E8873 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88931C1A15653A000E8873 /* main.m */; };
 		BF8893201A15653A000E8873 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF88931F1A15653A000E8873 /* AppDelegate.m */; };
 		BF8893231A15653A000E8873 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8893221A15653A000E8873 /* MasterViewController.m */; };
@@ -88,6 +89,7 @@
 		BF460DDE1A70956900B8D143 /* couchbase-lite-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "couchbase-lite-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF460DE31A70956900B8D143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF460DE41A70956900B8D143 /* couchbase_lite_macTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = couchbase_lite_macTests.m; sourceTree = "<group>"; };
+		BF862B181A9B8A5E00B5712F /* QueryBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryBuilderTests.m; sourceTree = "<group>"; };
 		BF8893171A15653A000E8873 /* couchbase-lite-ios-functional-tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "couchbase-lite-ios-functional-tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF88931B1A15653A000E8873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF88931C1A15653A000E8873 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				BF8893391A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m */,
 				BF8893371A15653A000E8873 /* Supporting Files */,
+				BF862B181A9B8A5E00B5712F /* QueryBuilderTests.m */,
 			);
 			path = "couchbase-lite-ios-functional-testsTests";
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF88933A1A15653A000E8873 /* couchbase_lite_ios_functional_testsTests.m in Sources */,
+				BF862B1A1A9B8A5E00B5712F /* QueryBuilderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
